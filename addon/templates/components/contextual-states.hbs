@@ -1,0 +1,14 @@
+{{yield
+  (hash
+    currentState=(readonly currentState)
+    state=(component 'contextual-states/contextual-state'
+      currentState=currentState
+      transitioningToState=transitioningToState
+      separateContent=separateContent
+      registerContextualState=(action 'registerContextualState')
+      setState=(action 'setState')
+    )
+    contextualStateAPIs=contextualStateAPIs
+    setState=(action 'setState')
+  )
+}}

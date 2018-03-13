@@ -1,0 +1,22 @@
+{{#contextual-states as |states|}}
+  {{#states.state 'Hello' as |state|}}
+    {{#state.content}}
+      This block will get rendered because the first state is by default the active one.
+      <button {{action state.setState 'World'}}>Next</button>
+    {{/state.content}}
+  {{/states.state}}
+  {{#states.state 'World' as |state|}}
+    {{#if state.isActive}}
+      This gives you an additional control on what to display if the state is active.
+    {{/if}}
+  {{/states.state}}
+  {{#states.state 'Foobar' as |state|}}
+    {{#if state.isLoading}}
+      If your states need to perform an async request, the current state will become 'loading' while the async request
+      is being performed.
+    {{/if}}
+    <button {{action state.setState 'Hello'}}>
+      You can switch states by calling the yielded function
+    </button>
+  {{/states.state}}
+{{/contextual-states}}

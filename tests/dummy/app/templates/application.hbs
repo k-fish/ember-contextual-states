@@ -5,26 +5,86 @@
         Ember Contextual States
       </h1>
       <h2 class="subtitle">
-        Just a simple mix of contexual components and state machines 🎉
+        Just a simple mix of contextual components and state machines 🎉
       </h2>
     </div>
   </div>
   <div class="hero-foot">
-    <nav class="tabs is-boxed is-fullwidth">
+    <nav class="tabs is-boxed">
       <div class="container">
         <ul>
-          <li class="is-active"><a>Overview</a></li>
-          <li><a>Modifiers</a></li>
-          <li><a>Grid</a></li>
-          <li><a>Elements</a></li>
-          <li><a>Components</a></li>
-          <li><a>Layout</a></li>
+          <li>{{scroll-to href="#about" label="About"}}</li>
+          <li>{{scroll-to href="#usage" label="Usage"}}</li>
+          <li>{{scroll-to href="#examples" label="Examples"}}</li>
+          <li><a href="{{githubUrl}}">Contributing</a></li>
         </ul>
       </div>
     </nav>
   </div>
 </section>
-{{outlet}}
+
+<section class="section">
+  <div class="container">
+    <h1 id="about" class="title">About</h1>
+    <hr>
+    <div class="content">
+      <p class="subtitle is-6"><strong>This is currently an in-development addon, and may not be actively maintained. Use
+          with care.</strong>&nbsp;⚠️
+      </p>
+      <p>
+        Ever felt frustrated writing boilerplate for making tabs, multi-step modals or tours? This is a simple addon aimed
+        at providing a way to manage states, using contextual components for management. It allows content to be rendered
+        with loading and active provided contextually, along with hooks for performing (async) actions between states. For
+        anything more complicated, you probably want routes or engines.
+      </p>
+      <p>
+        The provided component is somewhat verbose, but is meant to be used in composition. See the {{scroll-to
+        href="#examples" label="examples"}} section for
+        ways to simplify the api with composition.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h1 id="usage" class="title">Usage</h1>
+    <hr>
+    <div class="content">
+      <p>
+        You can make a new set of states by using the <code>\{{contextual-states}}</code> component. You may also want to
+        specify an <code>initialState</code>, if you don't want the default template order.
+      </p>
+      {{code-snippet name="usage-basic.hbs"}}
+      <p>
+        As seen above, a state will yield a <code>content</code> block, which is where content is rendered if the state
+        is active. If you need to customize behaviour further, the components yield state information as well.
+      </p>
+      {{code-snippet name="usage-advanced.hbs"}}
+      <br>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h1 id="examples" class="title">Examples</h1>
+    <hr>
+    <h3 class="title is-4 is-spaced">Tabs</h3>
+    <div class="content">
+      <p>
+        You can compose to simplify a tabs component.
+      </p>
+      {{code-snippet name="example-tabs-component.hbs"}}
+      <p>
+        Then with the simplified component you can now use the concept of tabs anywhere.
+      </p>
+      {{code-snippet name="example-tabs.hbs"}}
+    </div>
+      {{partial "snippets/example-tabs"}}
+  </div>
+</section>
+
 <a href="{{githubUrl}}" class="github-corner" aria-label="View source on Github"><svg width="80" height="80"
     viewBox="0 0 250 250" style="fill:#E04E39; color:#fff; position: fixed; top: 0; border: 0; right: 0;"
     aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0

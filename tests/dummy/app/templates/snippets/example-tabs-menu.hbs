@@ -1,0 +1,11 @@
+<div class="tabs">
+  <ul>
+    {{#each contextualStateAPIs as |availableState|}}
+      <li class="{{if availableState.isActive 'is-active'}}">
+        <a {{action states.setState availableState.stateName}}>
+          {{availableState.stateName}}
+        </a>
+      </li>
+    {{/each}}
+  </ul>
+</div>

@@ -1,3 +1,8 @@
 $primary: #E04E39;
 
 @import 'bulma';
+
+.content pre {
+  border-left: 3px solid $primary;
+  background: #f8f8f8;
+}

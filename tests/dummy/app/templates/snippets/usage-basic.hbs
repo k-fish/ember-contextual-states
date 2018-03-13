@@ -1,0 +1,14 @@
+{{#contextual-states as |states|}}
+  {{#states.state 'Hello' as |state|}}
+    {{#state.content}}
+      This block will get rendered because the first state is by default the active one.
+      <button {{action state.setState 'World'}}>Next</button>
+    {{/state.content}}
+  {{/states.state}}
+  {{#states.state 'World' as |state|}}
+    {{#state.content}}
+      This state will not be rendered unless the state is active.
+      <button {{action state.setState 'Hello'}}>Previous</button>
+    {{/state.content}}
+  {{/states.state}}
+{{/contextual-states}}

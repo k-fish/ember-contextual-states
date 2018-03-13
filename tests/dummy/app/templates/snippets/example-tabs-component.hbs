@@ -1,0 +1,8 @@
+{{#contextual-states as |states|}}
+  {{yield (hash
+      tab=(component states.state classNames="content" separateContent=false)
+      menu=(component 'tabs-menu' states=states contextualStateAPIs=states.contextualStateAPIs)
+    )
+  }}
+  {{states.contextualStateAPIs.length}}
+{{/contextual-states}}

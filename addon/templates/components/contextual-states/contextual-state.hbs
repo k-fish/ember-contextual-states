@@ -1,0 +1,22 @@
+{{#if separateContent}}
+  {{yield
+    (hash
+      active=isActive
+      loading=isLoading
+      content=(component 'contextual-states/contextual-state/state-content' isActive=isActive isLoading=isLoading)
+      canSetState=(action 'canSetState')
+      setState=(action 'setState')
+    )
+  }}
+{{else}}
+  {{#component 'contextual-states/contextual-state/state-content' isActive=isActive isLoading=isLoading}}
+    {{yield
+      (hash
+        active=isActive
+        loading=isLoading
+        canSetState=(action 'canSetState')
+        setState=(action 'setState')
+      )
+    }}
+  {{/component}}
+{{/if}}

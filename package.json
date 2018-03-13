@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "bulma": "^0.6.2",
+    "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-babel": "^6.6.0"
   },
   "devDependencies": {
