@@ -32,7 +32,8 @@
           with care.</strong>&nbsp;⚠️
       </p>
       <p>
-        Ever felt frustrated writing boilerplate for making tabs, multi-step modals or tours? This is a simple addon aimed
+        Ever felt frustrated writing boilerplate for making things like tabs, multi-steps modals (tours), accordions etc?
+        This is a simple addon aimed
         at providing a way to manage states, using contextual components for management. It allows content to be rendered
         with loading and active provided contextually, along with hooks for performing (async) actions between states. For
         anything more complicated, you probably want routes or engines.
@@ -79,9 +80,39 @@
       <p>
         Then with the simplified component you can now use the concept of tabs anywhere.
       </p>
-      {{code-snippet name="example-tabs.hbs"}}
     </div>
-      {{partial "snippets/example-tabs"}}
+    <div class="columns">
+      <div class="column">
+        <div class="content">
+          {{code-snippet name="example-tabs.hbs"}}
+        </div>
+      </div>
+      <div class="column">
+        <div class="code-example padded">
+        {{partial "snippets/example-tabs"}}
+        </div>
+      </div>
+    </div>
+
+    <h3 class="title is-4 is-spaced">Steps</h3>
+    <div class="content">
+      <p>
+        You can make a wizard-like experience by composing with steps.
+      </p>
+      {{code-snippet name="example-steps-component.hbs"}}
+    </div>
+    <div class="columns">
+      <div class="column">
+        <div class="content">
+          {{code-snippet name="example-steps.hbs"}}
+        </div>
+      </div>
+      <div class="column">
+        <div class="code-example padded has-text-centered flex-center flex-column">
+        {{partial "snippets/example-steps"}}
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 

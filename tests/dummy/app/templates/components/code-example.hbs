@@ -1,0 +1,8 @@
+{{#contextual-states as |states|}}
+  {{yield (hash
+      pane=(component states.state separateContent=false)
+      menu=(component 'code-example-menu' states=states contextualStateAPIs=states.contextualStateAPIs)
+    )
+  }}
+  {{states.contextualStateAPIs.length}}
+{{/contextual-states}}

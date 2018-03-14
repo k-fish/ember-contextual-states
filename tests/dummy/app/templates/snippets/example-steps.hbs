@@ -1,0 +1,47 @@
+<button class="button is-primary" {{action (mut isOpen) true}}>
+  Open
+</button>
+<div class="modal {{if isOpen 'is-active'}}">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <div class="box">
+      {{#steps-component as |steps|}}
+        {{#steps.step 'First Step'}}
+          <p>
+            Content for first step.
+          </p>
+          <br>
+          <button class="button is-primary"
+            {{action steps.goToStep 'Second Step'}}>
+            Next
+          </button>
+        {{/steps.step}}
+        {{#steps.step 'Second Step'}}
+          <p>
+            Content for second step.
+          </p>
+          <br>
+          <button class="button is-primary"
+            {{action steps.goToStep 'Third Step'}}>
+            Next
+          </button>
+        {{/steps.step}}
+        {{#steps.step 'Third Step'}}
+          <p>
+            Content for third step.
+          </p>
+          <br>
+          <button class="button is-primary"
+            {{action steps.goToStep 'First Step'}}>
+            Back to the beginning
+          </button>
+        {{/steps.step}}
+      {{/steps-component}}
+    </div>
+  </div>
+  <button
+    {{action (mut isOpen) false}}
+    class="modal-close is-large"
+    aria-label="close">
+  </button>
+</div>

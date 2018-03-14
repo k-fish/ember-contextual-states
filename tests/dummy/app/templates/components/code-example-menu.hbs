@@ -1,0 +1,7 @@
+{{#each contextualStateAPIs as |availableState|}}
+  {{#unless availableState.isActive}}
+    <a {{action states.setState availableState.stateName}}>
+      {{availableState.stateName}}
+    </a>
+  {{/unless}}
+{{/each}}
