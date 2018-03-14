@@ -1,0 +1,10 @@
+{{#accordion-component as |accordion|}}
+  <div class="accordion">
+    {{accordion.pane 'Photos' colour="blue"}}
+    {{accordion.pane 'Music' colour="green"}}
+    {{accordion.pane 'Video' colour="red"}}
+  </div>
+  <h4 class="title">
+    {{accordion.currentPane}}
+  </h4>
+{{/accordion-component}}

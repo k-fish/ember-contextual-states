@@ -1,1 +1,20 @@
-{{partial 'snippets/example-steps-component'}}
+<button class="button is-primary" {{action (mut isOpen) true}}>
+  Open
+</button>
+<div class="modal {{if isOpen 'is-active'}}">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <div class="content box">
+      {{partial 'snippets/example-steps-component'}}
+      <button {{action (mut isOpen) false}}
+        class="button">
+        Close
+      </button>
+    </div>
+  </div>
+  <button
+    {{action (mut isOpen) false}}
+    class="modal-close is-large"
+    aria-label="close">
+  </button>
+</div>

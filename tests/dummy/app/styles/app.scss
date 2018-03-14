@@ -26,3 +26,31 @@ $primary: #E04E39;
 .flex-column {
   flex-direction: column;
 }
+
+.accordion {
+  display: flex;
+  height: 200px;
+  width: 200px;
+}
+.accordion-state {
+  transition: all 0.16s ease-in-out;
+  transition-property: flex-grow opacity;
+  flex-grow: 1;
+  cursor: pointer;
+  opacity: 0.8;
+  color: white;
+
+  &:hover,&.is-active {
+    flex-grow: 2;
+    opacity: 1;
+  }
+}
+.red {
+  background-color: #253746;
+}
+.green {
+  background-color: #E04E39;
+}
+.blue {
+  background-color: #83C97C;
+}

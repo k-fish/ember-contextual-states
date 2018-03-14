@@ -1,0 +1,12 @@
+{{#contextual-states as |states|}}
+  {{yield
+    (hash
+      pane=(component 'accordion-state'
+        currentState=states.currentState
+        stateComponent=(component states.state separateContent=false)
+        setState=states.setState
+      )
+      currentPane=(readonly states.currentState)
+    )
+  }}
+{{/contextual-states}}

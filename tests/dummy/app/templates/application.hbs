@@ -70,6 +70,7 @@
 <section class="section">
   <div class="container">
     <h1 id="examples" class="title">Examples</h1>
+    <div class="subtitle">Made with Bulma CSS ❤️ </div>
     <hr>
     <h3 class="title is-4 is-spaced">Tabs</h3>
     <div class="content">
@@ -100,6 +101,10 @@
         You can make a wizard-like experience by composing with steps.
       </p>
       {{code-snippet name="example-steps-component.hbs"}}
+      <p>
+        Here you can provide a sane default for a button and expose it as a yielded component.
+      </p>
+      {{code-snippet name="example-steps-goto-button.hbs"}}
     </div>
     <div class="columns">
       <div class="column">
@@ -110,6 +115,30 @@
       <div class="column">
         <div class="code-example padded has-text-centered flex-center flex-column">
         {{partial "snippets/example-steps"}}
+        </div>
+      </div>
+    </div>
+
+    <h3 class="title is-4 is-spaced">Accordion</h3>
+    <div class="content">
+      <p>
+        You can also make accordions or manage accordion states.
+      </p>
+      {{code-snippet name="example-accordion-component.hbs"}}
+      <p>
+        Creating a new component allows the component to catch mouseEnter events to set the state.
+      </p>
+      {{code-snippet name="example-accordion-state.hbs"}}
+    </div>
+    <div class="columns">
+      <div class="column">
+        <div class="content">
+          {{code-snippet name="example-accordion.hbs"}}
+        </div>
+      </div>
+      <div class="column">
+        <div class="code-example padded has-text-centered flex-center flex-column">
+        {{partial "snippets/example-accordion"}}
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 {{#contextual-states as |states|}}
   {{yield (hash
       step=(component states.state classNames="content padded" separateContent=false)
-      goToStep=(action states.setState)
+      goToStep=(component 'steps-goto-button' goToStep=(action states.setState) label='Next')
     )
   }}
 {{/contextual-states}}
