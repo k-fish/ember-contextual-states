@@ -6,7 +6,7 @@ module.exports = {
   message: "Release %@",
   publish: true,
   afterPublish: function(project, versions) {
-    runCommand('ember github-pages:commit --message "Released ' + versions.next + '"');
+    runCommand('git config core.autocrlf true && ember github-pages:commit --message "Released ' + versions.next + '"');
     runCommand('git push origin gh-pages:gh-pages');
   },
 };
