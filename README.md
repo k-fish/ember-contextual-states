@@ -4,6 +4,7 @@
 Ember-contextual-states is a simple addon for managing representation states with contextual components. It is designed
 to be composed with other addons and css.
 
+
 The demo and documentation for this addon live on it's github page, [check it out here.](https://k-fish.github.io/ember-contextual-states/).
 
 ## Installation
