@@ -105,7 +105,7 @@ export default Component.extend({
       return chainedPromise.then(() => {
         this.set('currentState', stateName);
         this.set('transitioningToState', '');
-        this.get('didChangeState')();
+        this.get('didChangeState')(stateName);
       });
     }
   }
